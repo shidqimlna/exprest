@@ -1,20 +1,14 @@
 @media screen and (max-width: 499px) {
     .nav {
-        /* margin-top: 14rem; */
         z-index: 10;
         background-color: white;
-        width: 10rem;
+        width: 15rem;
         position: fixed;
         height: 100%;
         left: -1rem;
         top: 0;
-        /* right: 0; */
-
-        /* This trasform moves the drawer off canvas. */
-        -webkit-transform: translate(-10rem, 0);
-        transform: translate(-10rem, 0);
-
-        /* Optionally, we animate the drawer. */
+        -webkit-transform: translate(-15rem, 0);
+        transform: translate(-15rem, 0);
         transition: transform 0.3s ease;
     }
 
