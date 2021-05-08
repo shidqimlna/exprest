@@ -17,15 +17,17 @@
         />
     </head>
     <body>
-        <!-- skip-link -->
         <a href="#main-content" class="skip-link">Skip to Content</a>
 
         <header class="header">
-            <button id="menu" class="header__menu" aria-label="button">
+            <button
+                id="menu"
+                class="header__menu"
+                tabindex="0"
+                aria-label="button"
+            >
                 <i class="fas fa-bars"></i>
             </button>
-
-            <!-- <a id="menu" class="header__menu">☰</a> -->
 
             <div class="header__inner">
                 <h1 class="header__title">Exprest</h1>
@@ -61,7 +63,7 @@
             </div>
         </section>
 
-        <main>
+        <main id="main-content">
             <section class="content">
                 <h2 class="content__label">Explore Restaurant</h2>
                 <restaurant-list></restaurant-list>

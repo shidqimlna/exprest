@@ -1,3 +1,9 @@
+@media screen and (min-width: 300px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 499px) {
     .nav {
         z-index: 10;
@@ -19,14 +25,11 @@
     }
 
     .nav__item {
-        /* display: list-item; */
         border-bottom: 1px solid #e0e0e0;
         width: 100%;
     }
 
     .nav__list {
-        /* height: 100%; */
-        /* align-content: center; */
         margin-top: 1rem;
     }
 
@@ -46,10 +49,11 @@
     }
 }
 
-@media screen and (min-width: 700px) {
-    body {
+@media screen and (min-width: 600px) {
+    html {
         font-size: 14px;
     }
+
     .item__thumbnail {
         height: 15rem;
     }
@@ -61,7 +65,7 @@
 }
 
 @media screen and (min-width: 900px) {
-    body {
+    html {
         font-size: 16px;
     }
     restaurant-list {
@@ -71,7 +75,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-    body {
+    html {
         font-size: 18px;
     }
     main {

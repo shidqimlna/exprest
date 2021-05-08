@@ -26,19 +26,15 @@ const main = () => {
     const restaurantData = async () => {
         try {
             const result = await DataSource.restaurantData();
-            // console.log(result);
             renderResult(result);
         } catch (message) {
             console.log(message);
-            // fallbackResult(message);
         }
     };
 
     const renderResult = (result) => {
         restaurantList.restaurant = result.restaurants;
     };
-
-    // const fallbackResult = (message) => {};
 
     restaurantData();
 };
