@@ -35,7 +35,6 @@ const main = () => {
     };
 
     const renderResult = (result) => {
-        console.log(result.restaurants);
         restaurantList.restaurant = result.restaurants;
     };
 
