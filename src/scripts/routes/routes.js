@@ -1,6 +1,6 @@
-import Home from '../views/pages/home';
-import Favorite from '../views/pages/favorite';
-import Detail from '../views/pages/detail';
+import Home from '../view/pages/home';
+import Favorite from '../view/pages/favorite';
+import Detail from '../view/pages/detail';
 
 const routes = {
     '/': Home,
