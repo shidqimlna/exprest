@@ -1,7 +1,7 @@
 import DataSource from '../../data/data-source';
 import '../../components/restaurant-list';
 
-const NowPlaying = {
+const Home = {
     async render() {
         return `
         <section class="hero">
@@ -23,17 +23,18 @@ const NowPlaying = {
     },
 
     async afterRender() {
-        const restaurants = document.querySelector('.content');
-        const restaurantsContainer = document.querySelector('restaurant-list');
+        const content = document.querySelector('.content');
+        const restaurantList = document.querySelector('restaurant-list');
 
         try {
             const response = await DataSource.restaurantData();
-            restaurantsContainer.restaurant = response;
+            restaurantList.restaurant = response.restaurants;
         } catch (message) {
-            restaurants.innerHTML =
-                '<h2>Loading Data Failed! Please Check Your Connection</h2>';
+            console.log(message);
+            content.innerHTML =
+                '<h2>Oops! Something went wrong, please check your connection and try again later!</h2>';
         }
     },
 };
 
-export default NowPlaying;
+export default Home;

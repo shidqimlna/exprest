@@ -182,7 +182,7 @@ main {
     border-bottom: 1px solid #eeeeee;
 }
 
-/* post */
+/* list */
 
 restaurant-list {
     margin: 2rem auto auto;
@@ -191,7 +191,7 @@ restaurant-list {
     grid-row-gap: 2rem;
 }
 
-/* post item */
+/* item */
 
 .item {
     box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.2);
@@ -200,6 +200,11 @@ restaurant-list {
     font-size: 1rem;
     overflow: hidden;
     background-color: white;
+}
+
+.item a {
+    text-decoration: none;
+    color: var(--font-color);
 }
 
 .item__content {
