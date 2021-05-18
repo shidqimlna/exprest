@@ -24,43 +24,49 @@
     <body>
         <a href="#main-content" class="skip-link">Skip to Content</a>
 
-        <header class="header">
-            <button
-                id="menu"
-                class="header__menu"
-                tabindex="0"
-                aria-label="button"
-            >
-                <i class="fas fa-bars"></i>
-            </button>
+        <div id="page-container">
+            <div id="content-wrap">
+                <header class="header">
+                    <button
+                        id="menu"
+                        class="header__menu"
+                        tabindex="0"
+                        aria-label="button"
+                    >
+                        <i class="fas fa-bars"></i>
+                    </button>
 
-            <div class="header__inner">
-                <h1 class="header__title">Exprest</h1>
+                    <div class="header__inner">
+                        <h1 class="header__title">Exprest</h1>
+                    </div>
+
+                    <a class="header__menu" style="visibility: hidden">☰</a>
+
+                    <nav id="drawer" class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item"><h2>Exprest</h2></li>
+                            <li class="nav__item"><a href="/">Home</a></li>
+                            <li class="nav__item">
+                                <a href="#/favorite">Favorite</a>
+                            </li>
+                            <li class="nav__item">
+                                <a
+                                    href="https://shidqimlna.github.io/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >About Us</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <main id="main-content"></main>
             </div>
 
-            <a class="header__menu" style="visibility: hidden">☰</a>
-
-            <nav id="drawer" class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><h2>Exprest</h2></li>
-                    <li class="nav__item"><a href="/">Home</a></li>
-                    <li class="nav__item"><a href="#">Favorite</a></li>
-                    <li class="nav__item">
-                        <a
-                            href="https://shidqimlna.github.io/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >About Us</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <main id="main-content"></main>
-
-        <footer>
-            <p>Copyright @ 2021 - Exprest</p>
-        </footer>
+            <footer>
+                <p>Copyright @ 2021 - Exprest</p>
+            </footer>
+        </div>
     </body>
 </html>

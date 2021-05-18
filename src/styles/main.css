@@ -117,7 +117,6 @@ body {
     display: grid;
     align-items: center;
     justify-items: center;
-    margin-top: 4rem;
     min-height: 380px;
     width: 100%;
     background-image: url('../public/images/heros/hero.jpg');
@@ -161,6 +160,7 @@ body {
 main {
     width: 100%;
     margin: 0 auto;
+    padding-top: 4rem;
 }
 
 /* content */
@@ -251,11 +251,26 @@ restaurant-list {
 
 /* footer */
 
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 3rem; /* Footer height */
+}
+
 footer {
-    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    box-shadow: 8px 8px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
     font-size: 1rem;
     text-align: center;
-    background-color: white;
-    box-shadow: 8px 8px 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -28,12 +28,13 @@ const Like = {
         try {
             const response = await FavoriteRestaurantIdb.getAllRestaurants();
             if (response.length === 0) {
-                content.innerHTML = '<h2>Your Favorite List is Empty!</h2>';
+                content.innerHTML =
+                    '<h2 style="text-align: center;">Your Favorite List is Empty!</h2>';
             } else restaurantList.restaurant = response.restaurants;
         } catch (message) {
             console.log(message);
             content.innerHTML =
-                '<h2>Oops! Something went wrong, please check your connection and try again later!</h2>';
+                '<h2 style="text-align: center;">Oops! Something went wrong, please check your connection and try again later!</h2>';
         }
     },
 };

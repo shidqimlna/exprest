@@ -32,7 +32,7 @@ const Home = {
         } catch (message) {
             console.log(message);
             content.innerHTML =
-                '<h2>Oops! Something went wrong, please check your connection and try again later!</h2>';
+                '<h2 style="text-align: center;">Oops! Something went wrong, please check your connection and try again later!</h2>';
         }
     },
 };
