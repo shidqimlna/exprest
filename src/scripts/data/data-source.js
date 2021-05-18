@@ -7,7 +7,12 @@ class DataSource {
         return response.json();
     }
 
-    static async PostRestaurant(data) {
+    static async detailRestaurants(id) {
+        const response = await fetch(API_ENDPOINT.DETAIL(id));
+        return response.json();
+    }
+
+    static async PostReview(data) {
         const response = await fetch(API_ENDPOINT.POST_REVIEW, {
             method: 'POST',
             headers: {
@@ -17,11 +22,6 @@ class DataSource {
             body: JSON.stringify(data),
         });
         return response;
-    }
-
-    static async detailRestaurants(id) {
-        const response = await fetch(API_ENDPOINT.DETAIL(id));
-        return response.json();
     }
 }
 

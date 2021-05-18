@@ -22,11 +22,19 @@ const Like = {
     },
 
     async afterRender() {
-        const movies = await FavoriteRestaurantIdb.getAllMovies();
-        const moviesContainer = document.querySelector('#movies');
-        movies.forEach((movie) => {
-            moviesContainer.innerHTML += createMovieItemTemplate(movie);
-        });
+        const content = document.querySelector('.content');
+        const restaurantList = document.querySelector('restaurant-list');
+
+        try {
+            const response = await FavoriteRestaurantIdb.getAllRestaurants();
+            if (response.length === 0) {
+                content.innerHTML = '<h2>Your Favorite List is Empty!</h2>';
+            } else restaurantList.restaurant = response.restaurants;
+        } catch (message) {
+            console.log(message);
+            content.innerHTML =
+                '<h2>Oops! Something went wrong, please check your connection and try again later!</h2>';
+        }
     },
 };
 

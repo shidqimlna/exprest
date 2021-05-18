@@ -47,7 +47,7 @@ module.exports = {
             entry: path.resolve(__dirname, 'src/scripts/sw.js'),
         }),
         new FaviconsWebpackPlugin({
-            logo: path.resolve(__dirname, 'src/public/favicon.png'),
+            logo: path.resolve(__dirname, 'src/public/images/favicon.png'),
         }),
         new CleanWebpackPlugin(),
     ],

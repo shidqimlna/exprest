@@ -5,8 +5,8 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import App from './view/app';
 import swRegister from './utils/sw-register';
-import WebSocketInitiator from './utils/websocket-initiator';
-import CONFIG from './global/config';
+// import WebSocketInitiator from './utils/websocket-initiator';
+// import CONFIG from './global/config';
 
 const app = new App({
     button: document.querySelector('#menu'),
@@ -21,5 +21,5 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('DOMContentLoaded', async () => {
     await app.renderPage();
     swRegister();
-    WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+    // WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });
