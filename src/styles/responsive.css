@@ -43,7 +43,7 @@
 }
 
 @media screen and (min-width: 500px) {
-    .header__menu,
+    .app-bar__menu,
     .nav h2 {
         display: none;
     }
@@ -78,9 +78,7 @@
     html {
         font-size: 18px;
     }
-    main {
-        max-width: 1200px;
-    }
+
     restaurant-list {
         gap: 2rem;
     }

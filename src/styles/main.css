@@ -43,9 +43,9 @@ body {
     top: 5rem;
 }
 
-/* Header */
+/* App Bar */
 
-.header {
+app-bar {
     top: 0;
     position: fixed;
     width: 100%;
@@ -59,19 +59,26 @@ body {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
-.header__inner {
+.app-bar__inner {
     text-align: center;
     margin: 0 auto;
 }
 
-.header__title {
+.app-bar__title {
     margin: 0.5rem 0;
     font-size: 2rem;
     font-weight: 600;
     display: inline-block;
+    text-decoration: none;
+    color: var(--font-color);
 }
 
-.header__menu {
+.app-bar__title:hover {
+    transition: 0.3s;
+    color: var(--navbar-hover);
+}
+
+.app-bar__menu {
     font-size: 2rem;
     cursor: pointer;
     border: none;
@@ -158,8 +165,6 @@ body {
 /* main */
 
 main {
-    width: 100%;
-    margin: 0 auto;
     padding-top: 4rem;
 }
 
@@ -167,10 +172,12 @@ main {
 
 .content {
     padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .content__label {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: 500;
 }

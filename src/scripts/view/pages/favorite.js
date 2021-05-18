@@ -1,6 +1,7 @@
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
+import '../../components/restaurant-list';
 
-const Like = {
+const Favorite = {
     async render() {
         return `
         <section class="hero">
@@ -29,14 +30,14 @@ const Like = {
             const response = await FavoriteRestaurantIdb.getAllRestaurants();
             if (response.length === 0) {
                 content.innerHTML =
-                    '<h2 style="text-align: center;">Your Favorite List is Empty!</h2>';
+                    '<h2 class="content__label" style="text-align: center;">Your Favorite List is Empty!</h2>';
             } else restaurantList.restaurant = response.restaurants;
         } catch (message) {
             console.log(message);
             content.innerHTML =
-                '<h2 style="text-align: center;">Oops! Something went wrong, please check your connection and try again later!</h2>';
+                '<h2 class="content__label" style="text-align: center;">Oops! Something went wrong, please check your connection and try again later!</h2>';
         }
     },
 };
 
-export default Like;
+export default Favorite;
