@@ -1,19 +1,11 @@
 import DataSource from '../../data/data-source';
 import '../../components/restaurant-list';
+import '../../components/hero-component';
 
 const Home = {
     async render() {
         return `
-        <section class="hero">
-            <div class="hero__overlay">
-                <div class="hero__inner">
-                    <h1 class="hero__title">Foodies welcome</h1>
-                    <p class="hero__tagline">
-                        We’ve got something for everyone!
-                    </p>
-                </div>
-            </div>
-        </section>
+        <hero-component></hero-component>
 
         <section class="content">
             <h2 class="content__label">Explore Restaurant</h2>
@@ -28,7 +20,7 @@ const Home = {
 
         try {
             const response = await DataSource.restaurantData();
-            restaurantList.restaurant = response.restaurants;
+            restaurantList.restaurants = response.restaurants;
         } catch (message) {
             console.log(message);
             content.innerHTML =

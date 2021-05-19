@@ -1,19 +1,11 @@
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import '../../components/restaurant-list';
+import '../../components/hero-component';
 
 const Favorite = {
     async render() {
         return `
-        <section class="hero">
-            <div class="hero__overlay">
-                <div class="hero__inner">
-                    <h1 class="hero__title">Foodies welcome</h1>
-                    <p class="hero__tagline">
-                        We’ve got something for everyone!
-                    </p>
-                </div>
-            </div>
-        </section>
+        <hero-component></hero-component>
 
         <section class="content">
             <h2 class="content__label">Your Favorite Restaurant</h2>
@@ -31,7 +23,10 @@ const Favorite = {
             if (response.length === 0) {
                 content.innerHTML =
                     '<h2 class="content__label" style="text-align: center;">Your Favorite List is Empty!</h2>';
-            } else restaurantList.restaurant = response.restaurants;
+            } else {
+                console.log(response);
+                restaurantList.restaurants = response;
+            }
         } catch (message) {
             console.log(message);
             content.innerHTML =

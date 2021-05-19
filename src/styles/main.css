@@ -281,3 +281,21 @@ footer {
     font-size: 1rem;
     text-align: center;
 }
+
+/* detail */
+
+.btn-fab {
+    background-color: var(--navbar-hover);
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 2rem;
+    bottom: 4rem;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 8px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-fab i {
+    font-size: 24px;
+}

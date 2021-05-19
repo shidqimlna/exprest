@@ -1,7 +1,7 @@
 import './restaurant-item';
 
 class RestaurantList extends HTMLElement {
-    set restaurant(items) {
+    set restaurants(items) {
         this._items = items;
         this.render();
     }
@@ -9,9 +9,8 @@ class RestaurantList extends HTMLElement {
     render() {
         this.innerHTML = '';
         this._items.forEach((item) => {
-            const restaurantItemElement = document.createElement(
-                'restaurant-item'
-            );
+            const restaurantItemElement =
+                document.createElement('restaurant-item');
             restaurantItemElement.restaurant = item;
             this.appendChild(restaurantItemElement);
         });
