@@ -10,7 +10,6 @@ const CONFIG = {
     DATABASE_NAME: 'exprest-database',
     DATABASE_VERSION: 1,
     OBJECT_STORE_NAME: 'exprest',
-    // WEB_SOCKET_SERVER: 'wss://javascript.info/article/websocket/chat/ws',
 };
 
 export default CONFIG;

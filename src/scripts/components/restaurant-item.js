@@ -11,15 +11,12 @@ class RestaurantItem extends HTMLElement {
         <article class="item" tabindex="0">
             <a href="#/detail/${this._item.id}">
 
-            <img class="lazyload item__thumbnail" src="images/loading.gif" data-src="${
-                CONFIG.BASE_IMAGE_URL.MEDIUM + this._item.pictureId
-            }"
-                    data-srcset="${
-                        CONFIG.BASE_IMAGE_URL.SMALL + this._item.pictureId
-                    } 480w, ${
-            CONFIG.BASE_IMAGE_URL.LARGE + this._item.pictureId
-        } 800w"
-                    alt="${this._item.name}" crossorigin="anonymous"/>
+                <img class="lazyload item__thumbnail" src="images/loading.gif" data-src="
+                    ${CONFIG.BASE_IMAGE_URL.MEDIUM + this._item.pictureId}"
+                    data-srcset="${CONFIG.BASE_IMAGE_URL.SMALL + this._item.pictureId} 480w, 
+                    ${CONFIG.BASE_IMAGE_URL.LARGE + this._item.pictureId} 800w"
+                    alt="${this._item.name}" crossorigin="anonymous"
+                />
                 <div class="item__content">
                     <p class="item__title">${this._item.name}</p>
                     <div class="item__detail__container">

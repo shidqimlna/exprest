@@ -9,8 +9,7 @@ class RestaurantList extends HTMLElement {
     render() {
         this.innerHTML = '';
         this._items.forEach((item) => {
-            const restaurantItemElement =
-                document.createElement('restaurant-item');
+            const restaurantItemElement = document.createElement('restaurant-item');
             restaurantItemElement.restaurant = item;
             this.appendChild(restaurantItemElement);
         });
