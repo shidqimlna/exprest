@@ -12,7 +12,7 @@ class DataSource {
         return response.json();
     }
 
-    static async PostReview(data) {
+    static async postReview(data) {
         const response = await fetch(API_ENDPOINT.POST_REVIEW, {
             method: 'POST',
             headers: {

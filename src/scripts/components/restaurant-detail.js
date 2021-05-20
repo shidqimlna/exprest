@@ -28,6 +28,9 @@ class RestaurantDetail extends HTMLElement {
                         </div>
                     </div>
                     <p class="item__description">${this._item.description}</p>
+                    <input id="name">
+                    <input id="review">
+                    <button id="submit">Submit</button>
                 </div>
         `;
     }
