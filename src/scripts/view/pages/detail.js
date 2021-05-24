@@ -40,19 +40,19 @@ const Detail = {
 
             data.categories.forEach((category) => {
                 categoriesList += `
-                <span class="detail__category">${category.name}</span>
+                <span class="detail__category" tabindex="0">${category.name}</span>
             `;
             });
 
             data.menus.foods.forEach((food) => {
                 foodsList += `
-                <li class="detail__menu-item">${food.name}</li>
+                <li class="detail__menu-item" tabindex="0">${food.name}</li>
             `;
             });
 
             data.menus.drinks.forEach((drink) => {
                 drinksList += `
-                <li class="detail__menu-item">${drink.name}</li>
+                <li class="detail__menu-item" tabindex="0">${drink.name}</li>
             `;
             });
 
@@ -67,31 +67,35 @@ const Detail = {
                 />
 
                 <div class="detail__content">
-                    <h2 class="detail__title">${data.name}</h2>
+                    <h2 class="detail__title" tabindex="0">${data.name}</h2>
                     <p class="detail__categories">${categoriesList}</p>
                     <div class="detail__info__container">
                         <div class="detail__info">
                             <i class="fas fa-map-marker-alt" style="color: crimson"></i>
-                            <span class="detail__location">${data.address}, ${
-                data.city
-            }</p>
+                            <span class="detail__location" tabindex="0">${
+                                data.address
+                            }, ${data.city}</p>
                         </div>
                         <div class="detail__info">
                             <i class="fas fa-star" style="color: gold"></i>
-                            <span class="detail__rating">${data.rating}</p>
+                            <span class="detail__rating" tabindex="0">${
+                                data.rating
+                            }</p>
                         </div>
                     </div>
-                    <p class="detail__description">${data.description}</p>
-                    <h3 class="detail__menu_label">Menu</h3>
+                    <p class="detail__description" tabindex="0">${
+                        data.description
+                    }</p>
+                    <h3 class="detail__menu_label" tabindex="0">Menu</h3>
                     <div class="detail__menu">
                         <div class="detail__menu-container">
-                            <h4 class="detail__menu_label">Foods</h4>
+                            <h4 class="detail__menu_label" tabindex="0">Foods</h4>
                             <ul class="detail__menu-items">
                                 ${foodsList}
                             </ul>
                         </div>
                         <div class="detail__menu-container">
-                            <h4 class="detail__menu_label">Drinks</h4>
+                            <h4 class="detail__menu_label" tabindex="0">Drinks</h4>
                             <ul class="detail__menu-items">
                                 ${drinksList}
                             </ul>
@@ -99,21 +103,22 @@ const Detail = {
                     </div>
                     <form class="detail__form">
                     <h3 class="detail__menu_label">Review</h3>
-                    <ul class="detail__review-list">${reviewList}</div>
-                        <div class="col-form">
-                            <input type="text" id="name" class="detail__form-input" name="name" placeholder="Enter your name" value="">
-                        </div>
-                        <div class="col-form">
+                    <div class="detail__form-container">
+                        <ul class="detail__review-list">${reviewList}</ul>
+                        <div class="detail__form-inputcontainer">
+                            <input type="text" id="name" class="detail__form-input" name="name" placeholder="Enter your name..." value="">    
                             <textarea id="review" name="review" class="detail__form-input" placeholder="Your review here..." rows="5"></textarea>
+                            <button id="submitReview" aria-label="submit review" class="detail__form-submit">Submit</button>
                         </div>
-                        <button id="submitReview" aria-label="submit review" class="detail__form-submit">Submit</button>
+                    </div>
                     </form>
                 </div>
         `;
 
             document
                 .querySelector('#submitReview')
-                .addEventListener('click', async () => {
+                .addEventListener('click', async (event) => {
+                    event.preventDefault();
                     const { id } = url;
                     const name = document.getElementById('name').value;
                     const review = document.getElementById('review').value;
@@ -128,14 +133,14 @@ const Detail = {
                                 let resultList = '';
                                 result.customerReviews
                                     .reverse()
-                                    .forEach((review1) => {
+                                    .forEach((reviewResult) => {
                                         resultList += `
                                     <article class="review__item" tabindex="0">
                                         <div class="review__item-info">
-                                            <span class="review__item-name">${review1.name}</span>
-                                            <span class="review__item-date">(${review1.date})</span>
+                                            <span class="review__item-name">${reviewResult.name}</span>
+                                            <span class="review__item-date">(${reviewResult.date})</span>
                                         </div>
-                                        <p class="review__item-review">${review1.review}</p>
+                                        <p class="review__item-review">${reviewResult.review}</p>
                                     </article>
                                 `;
                                     });
@@ -171,47 +176,6 @@ const Detail = {
             </h2>
             `;
         }
-    },
-
-    async postReview(id) {
-        document
-            .querySelector('#submitReview')
-            .addEventListener('click', async () => {
-                // e.preventDefault();
-
-                const name = document.getElementById('name').value;
-                const review = document.getElementById('review').value;
-
-                if (name !== '' || review !== '') {
-                    const reviewData = {
-                        id,
-                        name,
-                        review,
-                    };
-                    console.log(reviewData.review);
-                    DataSource.postReview(reviewData).then((data) => {
-                        if (data.customerReviews) {
-                            // console.log(data.customerReviews);
-                            // document.querySelector('.main-review').html('');
-                            // data.customerReviews.map((newReview) =>
-                            //     document
-                            //         .querySelector('.main-review')
-                            //         .append(
-                            //             createCustomerReviewTemplate(newReview)
-                            //         )
-                            // );
-                            //   swal('Thank You for Your Review', 'Your review has been sent successfully', 'success');
-                            // const reviewList =
-                            //     document.querySelector('review-list');
-                            // reviewList.reviews = data.customerReviews;
-                            // document.querySelector('review-list').html('');
-                        }
-                    });
-                } else {
-                    console.log('data.customerReviews');
-                    // swal('Sorry!', 'Please fill out the form completely to add your review!', 'error');
-                }
-            });
     },
 };
 

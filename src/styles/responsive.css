@@ -57,10 +57,29 @@
     .item__thumbnail {
         height: 15rem;
     }
+
     restaurant-list {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
+    }
+
+    .detail__menu-items {
+        gap: 0 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .detail__form-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .detail__review-list {
+        width: 70%;
+    }
+
+    .detail__form-inputcontainer {
+        width: 30%;
     }
 }
 
@@ -68,9 +87,13 @@
     html {
         font-size: 16px;
     }
+
     restaurant-list {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .detail__menu-items {
+        gap: 0 2.5rem;
     }
 }
 

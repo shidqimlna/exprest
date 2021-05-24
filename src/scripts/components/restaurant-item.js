@@ -8,9 +8,8 @@ class RestaurantItem extends HTMLElement {
 
     render() {
         this.innerHTML = `
-        <article class="item" tabindex="0">
-            <a href="#/detail/${this._item.id}">
-
+        <article class="item" >
+            <a href="#/detail/${this._item.id}" tabindex="0">
                 <img class="lazyload item__thumbnail" src="images/loading.gif" data-src="
                     ${CONFIG.BASE_IMAGE_URL.MEDIUM + this._item.pictureId}"
                     data-srcset="${CONFIG.BASE_IMAGE_URL.SMALL + this._item.pictureId} 480w, 

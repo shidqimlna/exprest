@@ -27,6 +27,12 @@ body {
     background-color: var(--dark-white);
 }
 
+button,
+a {
+    min-width: 44px;
+    min-height: 44px;
+}
+
 /* Skip link */
 
 .skip-link {
@@ -83,7 +89,6 @@ app-bar {
     cursor: pointer;
     border: none;
     outline: none;
-    padding: 1.5rem 2rem;
     background: transparent;
 }
 
@@ -107,7 +112,7 @@ app-bar {
 .nav a {
     display: inline-block;
     font-size: 1rem;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     text-decoration: none;
     color: var(--navbar-color);
 }
@@ -236,9 +241,8 @@ restaurant-list {
 
 .item__detail__container {
     margin: 0.5rem auto;
-    width: 70%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .item__detail {
@@ -289,8 +293,8 @@ footer {
     position: fixed;
     width: 60px;
     height: 60px;
-    right: 2rem;
-    bottom: 4rem;
+    right: 1.5rem;
+    bottom: 3.7rem;
     border: none;
     border-radius: 50%;
     color: white;
@@ -302,14 +306,20 @@ footer {
 }
 
 .detail__thumbnail {
-    margin-top: 1.5rem;
+    display: flex;
     width: 100%;
+    max-width: 800px;
     border-radius: 1rem;
+    margin: 0 auto;
+}
+
+.detail__content {
+    font-size: 1rem;
 }
 
 .detail__title {
     margin-top: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.5rem;
     text-align: center;
     transition: 0.3s opacity;
@@ -334,16 +344,8 @@ footer {
     margin: 0.5rem;
 }
 
-.detail__categories::after {
-    content: '';
-    margin-top: 0.5rem;
-    display: block;
-    border-bottom: 1px solid var(--navbar-hover);
-}
-
 .detail__info__container {
     margin: 0.5rem auto;
-    /* width: 70%; */
     display: flex;
     justify-content: space-evenly;
 }
@@ -360,6 +362,13 @@ footer {
     text-justify: inter-word;
 }
 
+.detail__description::after {
+    content: '';
+    margin: 0.8rem 0;
+    display: block;
+    border-bottom: 1px solid var(--navbar-hover);
+}
+
 .detail__menu_label {
     text-align: center;
 }
@@ -368,6 +377,13 @@ footer {
     display: flex;
     margin-top: 0.5rem;
     justify-content: space-evenly;
+}
+
+.detail__form::before {
+    content: '';
+    margin: 0.8rem 0;
+    display: block;
+    border-bottom: 1px solid var(--navbar-hover);
 }
 
 .detail__menu-items {
@@ -380,25 +396,27 @@ footer {
     border-radius: 0.5rem;
     padding: 0.5rem;
     min-height: 44px;
-    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .detail__form-submit {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     background-color: var(--navbar-hover);
     border-radius: 0.5rem;
     color: white;
     border: none;
     padding: 1rem;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 .detail__review-list {
     display: flex;
     overflow-x: scroll;
     margin: 0 -0.8rem 0 -1.2rem;
-    padding: 0.5rem 0 0.5rem 1.2rem;
+    padding: 0.5rem 0 1rem 1.2rem;
 }
 
 .review__item {
@@ -413,12 +431,4 @@ footer {
 .review__item-date {
     font-size: 0.7rem;
     color: grey;
-}
-
-/* button */
-
-button,
-a {
-    min-width: 44px;
-    min-height: 44px;
 }

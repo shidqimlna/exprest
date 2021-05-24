@@ -8,7 +8,7 @@ const createFavoriteButtonTemplate = () => `
 
 const createFavoritedButtonTemplate = () => `
     <button aria-label="unfavorite this restaurant" id="favoriteButton" class="btn-fab">
-        <i class="fa fa-heart" style="color: red" aria-hidden="true"></i>
+        <i class="fa fa-heart" style="color: crimson" aria-hidden="true"></i>
     </button>
 `;
 
