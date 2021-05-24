@@ -21,7 +21,7 @@ class DataSource {
             },
             body: JSON.stringify(data),
         });
-        return response;
+        return response.json();
     }
 }
 

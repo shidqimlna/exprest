@@ -17,6 +17,7 @@ const CacheHelper = {
         const response = await caches.match(request);
 
         if (response) {
+            this._fetchRequest(request);
             return response;
         }
         return this._fetchRequest(request);
@@ -29,7 +30,7 @@ const CacheHelper = {
     async _fetchRequest(request) {
         const response = await fetch(request);
 
-        if (!response || response.status !== 200) {
+        if (!response || response.status !== 200 || request.method == 'POST') {
             return response;
         }
 

@@ -12,9 +12,5 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    if (event.request.method === 'POST') {
-        event.respondWith(fetch(event.request));
-    } else {
-        event.respondWith(CacheHelper.revalidateCache(event.request.url));
-    }
+    event.respondWith(CacheHelper.revalidateCache(event.request));
 });
