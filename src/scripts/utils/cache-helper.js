@@ -15,7 +15,6 @@ const CacheHelper = {
 
     async revalidateCache(request) {
         const response = await caches.match(request);
-
         if (response) {
             this._fetchRequest(request);
             return response;
@@ -29,11 +28,7 @@ const CacheHelper = {
 
     async _fetchRequest(request) {
         const response = await fetch(request);
-
-        if (!response || response.status !== 200 || request.method == 'POST') {
-            return response;
-        }
-
+        if (!response || response.status !== 200 || request.method === 'POST') return response;
         await this._addCache(request);
         return response;
     },

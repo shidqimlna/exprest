@@ -59,9 +59,7 @@ const Detail = {
             restaurantDetail.innerHTML = `
                 <img class="lazyload detail__thumbnail" src="images/loading.gif" data-src="
                     ${CONFIG.BASE_IMAGE_URL.MEDIUM + data.pictureId}"
-                    data-srcset="${
-                        CONFIG.BASE_IMAGE_URL.SMALL + data.pictureId
-                    } 480w, 
+                    data-srcset="${CONFIG.BASE_IMAGE_URL.SMALL + data.pictureId} 480w, 
                     ${CONFIG.BASE_IMAGE_URL.LARGE + data.pictureId} 800w"
                     alt="${data.name}" crossorigin="anonymous"
                 />
@@ -72,20 +70,14 @@ const Detail = {
                     <div class="detail__info__container">
                         <div class="detail__info">
                             <i class="fas fa-map-marker-alt" style="color: crimson"></i>
-                            <span class="detail__location" tabindex="0">${
-                                data.address
-                            }, ${data.city}</p>
+                            <span class="detail__location" tabindex="0">${data.address}, ${data.city}</p>
                         </div>
                         <div class="detail__info">
                             <i class="fas fa-star" style="color: gold"></i>
-                            <span class="detail__rating" tabindex="0">${
-                                data.rating
-                            }</p>
+                            <span class="detail__rating" tabindex="0">${data.rating}</p>
                         </div>
                     </div>
-                    <p class="detail__description" tabindex="0">${
-                        data.description
-                    }</p>
+                    <p class="detail__description" tabindex="0">${data.description}</p>
                     <h3 class="detail__menu_label" tabindex="0">Menu</h3>
                     <div class="detail__menu">
                         <div class="detail__menu-container">
@@ -145,10 +137,10 @@ const Detail = {
                                 `;
                                     });
                                 document.querySelector(
-                                    '.detail__review-list'
+                                    '.detail__review-list',
                                 ).innerHTML = '';
                                 document.querySelector(
-                                    '.detail__review-list'
+                                    '.detail__review-list',
                                 ).innerHTML = resultList;
                             }
                         });
@@ -157,7 +149,7 @@ const Detail = {
 
             await FavoriteButtonInitiator.init({
                 favoriteButtonContainer: document.querySelector(
-                    '#favoriteButtonContainer'
+                    '#favoriteButtonContainer',
                 ),
                 restaurant: {
                     id: data.id,

@@ -4,7 +4,7 @@ class AppBar extends HTMLElement {
     }
 
     render() {
-        this.innerHTML = `
+        this.innerHTML = ` 
                     <button
                         id="menu"
                         class="app-bar__menu"

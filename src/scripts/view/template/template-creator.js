@@ -1,5 +1,3 @@
-// import CONFIG from '../../global/config';
-
 const createFavoriteButtonTemplate = () => `
     <button aria-label="favorite this restaurant" id="favoriteButton" class="btn-fab">
         <i class="fa fa-heart" style="color: pink" aria-hidden="true"></i>
