@@ -1,6 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import DataSource from '../../data/data-source';
-import FavoriteButtonInitiator from '../../utils/favorite-button-initiator';
+import FavoriteButtonPresenter from '../../utils/favorite-button-presenter';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import CONFIG from '../../global/config';
 
 const Detail = {
@@ -147,10 +148,11 @@ const Detail = {
                     }
                 });
 
-            await FavoriteButtonInitiator.init({
+            await FavoriteButtonPresenter.init({
                 favoriteButtonContainer: document.querySelector(
                     '#favoriteButtonContainer',
                 ),
+                favoriteRestaurants: FavoriteRestaurantIdb,
                 restaurant: {
                     id: data.id,
                     name: data.name,
