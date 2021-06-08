@@ -18,8 +18,6 @@ class AppBar extends HTMLElement {
                         <a href="/"><h1 class="app-bar__title">Exprest</h1></a>
                     </div>
 
-                    <a class="app-bar__menu" style="visibility: hidden">☰</a>
-
                     <nav id="drawer" class="nav">
                         <ul class="nav__list">
                             <li class="nav__item"><h2>Exprest</h2></li>

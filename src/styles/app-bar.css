@@ -1,0 +1,41 @@
+/* App Bar */
+
+app-bar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.app-bar__inner {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.app-bar__title {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.app-bar__title:hover {
+    transition: 0.3s;
+    color: var(--navbar-hover);
+}
+
+.app-bar__menu {
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}

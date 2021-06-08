@@ -22,11 +22,13 @@ const Home = {
             const response = await DataSource.restaurantData();
             restaurantList.restaurants = response.restaurants;
         } catch (message) {
-            console.log(message);
             content.innerHTML = `
             <h2 class="content__label" style="text-align: center;">
                 Oops! Something went wrong, please check your connection and try again later!
             </h2>
+            <p class="content__label" style="text-align: center;">
+                Error message: ${message}
+            </p>
             `;
         }
     },

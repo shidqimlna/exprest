@@ -96,7 +96,7 @@ const Detail = {
                     <form class="detail__form">
                     <h3 class="detail__menu_label">Review</h3>
                     <div class="detail__form-container">
-                        <ul class="detail__review-list">${reviewList}</ul>
+                        <section class="detail__review-list">${reviewList}</section>
                         <div class="detail__form-inputcontainer">
                             <input type="text" id="name" class="detail__form-input" name="name" placeholder="Enter your name..." value="">    
                             <textarea id="review" name="review" class="detail__form-input" placeholder="Your review here..." rows="5"></textarea>
@@ -161,11 +161,13 @@ const Detail = {
                 },
             });
         } catch (message) {
-            console.log(message);
             content.innerHTML = `
             <h2 class="content__label" style="text-align: center;">
                 Oops! Something went wrong, please check your connection and try again later!
             </h2>
+            <p class="content__label" style="text-align: center;">
+                Error message: ${message}
+            </p>
             `;
         }
     },
