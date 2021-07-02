@@ -2,7 +2,7 @@ class HeroComponent extends HTMLElement {
     connectedCallback() {
         this.render();
     }
-
+    
     render() {
         this.innerHTML = `
         <section class="hero">

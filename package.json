@@ -7,7 +7,9 @@
         "start-dev": "webpack-dev-server --config webpack.dev.js",
         "build": "webpack --config webpack.prod.js",
         "test": "karma start",
-        "e2e": "codeceptjs run --steps"
+        "e2e": "codeceptjs run --steps",
+        "lint": "eslint ./src",
+        "build-image": "node sharp.js"
     },
     "keywords": [],
     "author": "shidqi shidqimlna@gmail.com",
@@ -38,6 +40,7 @@
         "karma-sourcemap-loader": "^0.3.7",
         "karma-webpack": "^4.0.2",
         "puppeteer": "^5.2.1",
+        "sharp": "^0.28.3",
         "style-loader": "^1.2.1",
         "webpack": "^4.43.0",
         "webpack-bundle-analyzer": "^3.8.0",

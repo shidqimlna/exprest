@@ -84,6 +84,10 @@
 }
 
 @media screen and (min-width: 900px) {
+    .hero {
+        background-image: url('../public/images/heros/hero-medium.jpg');
+    }
+
     html {
         font-size: 16px;
     }
@@ -98,6 +102,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .hero {
+        background-image: url('../public/images/heros/hero-large.jpg');
+    }
+
     html {
         font-size: 18px;
     }
