@@ -9,7 +9,8 @@
         "test": "karma start",
         "e2e": "codeceptjs run --steps",
         "lint": "eslint ./src",
-        "build-image": "node sharp.js"
+        "build-image": "node sharp.js",
+        "bundle-report": "webpack-bundle-analyzer --port 4200 dist/stats.json"
     },
     "keywords": [],
     "author": "shidqi shidqimlna@gmail.com",

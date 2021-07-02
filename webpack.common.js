@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -50,5 +51,10 @@ module.exports = {
             logo: path.resolve(__dirname, 'src/public/images/favicon.png'),
         }),
         new CleanWebpackPlugin(),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'disabled',
+            generateStatsFile: true,
+            statsOptions: { source: false },
+        }),
     ],
 };
