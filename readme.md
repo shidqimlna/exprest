@@ -1,5 +1,5 @@
 # Exprest
-[![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/shidqimlna/express/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/shidqimlna/exprest/blob/master/LICENSE)
 
 Restaurant catalog web app
 
