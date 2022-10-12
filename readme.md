@@ -1,7 +1,7 @@
 # Exprest
 [![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/shidqimlna/exprest/blob/master/LICENSE)
 
-Restaurant catalog web app
+Restaurant catalog web app. Live at <a href="https://exprest.netlify.app"> exprest.netlify.app </a>
 
 <hr>
 <img src="art/exprest.png">
